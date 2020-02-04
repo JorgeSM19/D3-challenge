@@ -86,16 +86,6 @@ d3.csv("/assets/data/data.csv").then(function(seldata) {
         .html(function(d) { return `State: ${d.state} <br> Age: ${d.age} % <br> Income: ${d.income} %` });
     svg.call(tool_tip);
 
-    /*var toolTip = d3.tip(seldata)
-        .attr("class", "d3-tip")
-        .offset([80, -60])
-        .html(function(d) {
-            return (`State: ${d.state} <br> Age: ${d.age} % <br> Income: ${d.income} %`);
-        });
-    svg.call(toolTip);
-    */
-
-
     // Now render the SVG scene, connecting the tool tip to each circle.
     var circles = svg.selectAll("circle").data(d);
     circles.enter().append("circle")
