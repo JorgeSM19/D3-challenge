@@ -79,7 +79,6 @@ d3.csv("/assets/data/data.csv").then(function(seldata) {
         .text("Age (%)");
 
     // Tooltip
-
     var tool_tip = d3.tip(seldata)
         .attr("class", "d3-tip")
         .offset([-8, 0])
